@@ -28,18 +28,22 @@ $ node client.js [server IP address]
 ```bash
 $ node server.js
 $ node client.js 127.0.0.1
-Received from 127.0.0.1:3000: Ping 2 8:41:38:60
-RTT: 0 ms
-Request timed out for sequence 3
-Request timed out for sequence 4
-Received from 127.0.0.1:3000: Ping 5 8:41:38:60
-RTT: 0 ms
-Received from 127.0.0.1:3000: Ping 6 8:41:38:60
-RTT: 0 ms
-Request timed out for sequence 7
-Received from 127.0.0.1:3000: Ping 8 8:41:38:60
-RTT: 0 ms
-Request timed out for sequence 9
+Received from 127.0.0.1:3000: Ping 2 9:6:50:391
+RTT: 3 ms
+Received from 127.0.0.1:3000: Ping 3 9:6:51:391
+RTT: 2 ms
+Received from 127.0.0.1:3000: Ping 4 9:6:52:389
+RTT: 2 ms
+Request timed out for sequence 5
+Received from 127.0.0.1:3000: Ping 6 9:6:54:390
+RTT: 2 ms
+Received from 127.0.0.1:3000: Ping 7 9:6:55:390
+RTT: 2 ms
+Received from 127.0.0.1:3000: Ping 8 9:6:56:390
+RTT: 2 ms
+Received from 127.0.0.1:3000: Ping 9 9:6:57:390
+RTT: 2 ms
 Request timed out for sequence 10
+
 $
 ```
