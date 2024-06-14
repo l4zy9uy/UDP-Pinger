@@ -6,11 +6,17 @@ const hostname = process.argv[2];
 client.on('message', (mes, rInfo) => {
     const sentTime = mes.toString().split(' ')[2];
     const rtt = calculateTime(sentTime);
-
-    console.log(`Received from ${rInfo.address}:${rInfo.port}: ${mes}`);
+    max = Math.max(max, rtt);
+    min = Math.min(min, rtt);
+    sum += rtt;
+    num_of_received_message++;
+    console.log(`Received from ${rInfo.address}:${rInfo.port}`);
     console.log(`RTT: ${rtt} ms`);
 });
-
+let min = 1e9;
+let max = -1;
+let sum = 0;
+let num_of_received_message = 0;
 for (let i = 1; i <= 10; i++) {
     setTimeout(() => {
         const date = new Date();
@@ -27,6 +33,7 @@ for (let i = 1; i <= 10; i++) {
 }
 
 setTimeout(() => {
+    console.log(`rtt min/avg/max/rate: ${min}/${sum/num_of_received_message}/${max}/${(10-num_of_received_message)/10*100}%`);
     client.close();
 }, 12000);
 
